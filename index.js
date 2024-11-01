@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 
-const PORT = 3303;
+const PORT = 3333;
 
-app.use("/public", express.static);
+app.use(express.static(__dirname + "/public"));
 
 app.get("/contato", function (req, res) {
   res.sendFile(__dirname + "/src/views/contato.html");
